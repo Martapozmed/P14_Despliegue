@@ -1,5 +1,4 @@
-FROM debian:bullseye
-MAINTAINER Marta Pozo Medina "mpozmed410@g.educaand.es"
+FROM debian
 RUN apt update -y && apt upgrade -y && apt install -y apache2 libapache2-mod-php php php-mysql mariadb-client -y && apt clean && rm -rf /var/lib/apt/lists/*
 ADD bookmedik /var/www/html/
 ADD script.sh /opt/
